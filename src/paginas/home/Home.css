@@ -1,0 +1,43 @@
+.titulo{
+    color:#75ee11
+}
+.navegacao li{
+    display: inline;
+   padding: 20px;
+   
+   }
+   
+   .navegacao li a{
+       text-decoration: none;
+       color: #07e61a;
+   }
+   
+   .navegacao li a:hover{
+       text-transform:initial;
+       color: #6f7274;
+   }
+
+   .rodape{
+    align-items: center;
+    text-align:center;
+
+}
+
+
+.apresentacao{
+    color:#75ee11;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    
+    }
+
+    #sub{
+    color:#07e61a;
+
+    }
+
+    .margin a{
+        box-shadow: 0px 2px 18px #3ec25b85;
+
+    }
