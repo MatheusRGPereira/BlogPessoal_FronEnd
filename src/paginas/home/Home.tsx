@@ -1,35 +1,29 @@
-import React from "react";
+import React from 'react';
+import {Typography,Grid, Button} from '@material-ui/core';
+import {Box} from '@mui/material'
 import './Home.css';
 
-
-function Home(){
+function Home() {
     return (
         <>
-            <nav className="navegacao">
-                <h3 className="titulo">Blog Pessoal</h3>
-            <ul> 
-               <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Postagens</a></li>
-                <li><a href="index.html">Temas</a></li>
-                <li><a href="index.html">CadastrarTema</a></li>
-                <li><a href="index.html">Logout</a></li>
-            </ul>
-        </nav>
-        <div className="apresentacao">
-        <h1>Seja Bem vindo ao Blog Pessoal</h1>
-        <h4 id="sub">Diga aqui oque voçê está pensando!!</h4>
-        <nav className="navegacao">
-                <ul className="margin">
-                <li><a href="index.html">Nova Postagem</a></li>
-                <li><a href="index.html">Ver Postagens</a></li>
-                </ul>
-        </nav>
-
-        </div>
-        <footer className="rodape">
-              <p>Produzido por Matheus</p> 
-               <p>Generation Brasil</p>
-         </footer>
+            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#3F51B5" }}>
+                <Grid alignItems="center" item xs={6}>
+                    <Box paddingX={20} >
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>expresse aqui os seus pensamentos e opiniões!</Typography>
+                    </Box>
+                    <Box display="flex" justifyContent="center">
+                        <Box marginRight={1}>
+                        </Box>
+                        <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>Ver Postagens</Button>
+                    </Box>
+                </Grid>
+                <Grid item xs={6} >
+                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                </Grid>
+                <Grid xs={12} style={{ backgroundColor: "white" }}>
+                </Grid>
+            </Grid>
         </>
     );
 }
