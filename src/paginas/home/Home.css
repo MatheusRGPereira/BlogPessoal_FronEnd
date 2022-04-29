@@ -1,11 +1,9 @@
-.titulo{
-    color: blue;
-    text-align: center;
-}
 
-.img{
-    width: 500px;
-    height: 500px;
-    display: block;
-    margin: 0 auto;
+.title{
+    color: "white";
+    font-weight: "bold";
+ }
+
+.caixa{
+    background-color: #3F51B5;
 }
