@@ -1,9 +1,22 @@
 
-.title{
-    color: "white";
-    font-weight: "bold";
+.titulo{
+    color: white !important;
+    font-weight: "bold" !important;
  }
 
 .caixa{
     background-color: #3F51B5;
 }
+
+.botao{
+    border-color: white !important;
+    background-color: #3F51B5;
+    color:white !important;
+
+}
+
+.postagens{
+    background-color: white;
+}
+
+
