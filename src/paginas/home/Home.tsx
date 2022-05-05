@@ -4,6 +4,8 @@ import {Typography,Grid, Button, Box} from '@material-ui/core';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import './Home.css';
 
+
+
 function Home() {
     return (
         <>

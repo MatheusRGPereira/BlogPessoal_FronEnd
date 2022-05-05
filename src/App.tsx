@@ -12,20 +12,22 @@ import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 function App() {
   return (
     <Router>
-      <Navbar />
+       <Navbar />
       <Routes>
 
-        <Route path="/" element={<Login  />} />
-
+        <Route path="/" element={<Login />} />
+        
         <Route path="/home" element={<Home />} />
 
         <Route path="/login" element={<Login />} />
 
-        <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
+        <Route path="/cadastrousuario" element={<CadastroUsuario />} />
 
         <Route path="/temas" element={<ListaTema />} />
 
         <Route path="/posts" element={<ListaPostagem />} />
+
+        <Route path="/formularioTema" element={<ListaPostagem />} />
 
 
       </Routes>

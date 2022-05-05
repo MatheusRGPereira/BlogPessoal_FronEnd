@@ -10,8 +10,8 @@
 
 
 .redes{
-    font-size:60px;
-    color: #ffffff;
+    font-size:60px !important;
+    color: #ffffff !important;
 }
 
 .texto{
