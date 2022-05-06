@@ -7,22 +7,21 @@ import useLocalStorage from 'react-use-localstorage';
 import {useNavigate} from 'react-router-dom';
 import { busca } from '../../../service/Service';
 
-
 function ListaTema() {
   const [temas, setTemas] = useState<Tema[]>([])
   const [token, setToken] = useLocalStorage('token');
-  let navigate = useNavigate();
+  let history = useNavigate();
 
   useEffect(()=>{
     if(token == ''){
       alert("Você precisa estar logado")
-      navigate("/login")
+      history ("/login")
     }
   }, [token])
 
 
   async function getTema(){
-    await busca("/tema", setTemas, {
+    await busca("/temas", setTemas, {
       headers: {
         'Authorization': token
       }
@@ -36,15 +35,13 @@ function ListaTema() {
 
   return (
     <>
- 
-
     {
       temas.map(tema =>(
       <Box m={2} >
         <Card variant="outlined">
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
-              Tema
+              temas
             </Typography>
             <Typography variant="h5" component="h2">
              {tema.descricao}

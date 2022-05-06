@@ -7,16 +7,15 @@ import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
 
-
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
   const [token, setToken] = useLocalStorage('token');
-  let navigate = useNavigate();
+  let history = useNavigate();
 
   useEffect(() => {
     if (token == "") {
       alert("Você precisa estar logado")
-      navigate("/login")
+      history ("/login")
 
     }
   }, [token])
@@ -36,8 +35,7 @@ function ListaPostagem() {
   }, [posts.length])
 
   return (
-   
-   <> 
+    <>
       {
         posts.map(post => (
           <Box m={2} >

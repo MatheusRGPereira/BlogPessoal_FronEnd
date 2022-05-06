@@ -5,20 +5,36 @@ export const api = axios.create({
 })
 
 
-export const cadastroUsuario =async (url: any , dados: any, setDado: any) => {  //usuarios cadastrar
-    const resposta = await api.post(url, dados)
+export const cadastroUsuario = async(url: any,dados: any,setDado: any) => { 
+    const resposta = await api.post(url,dados)
     setDado(resposta.data)
-
 }
 
-export const login =async (url: any , dados: any, setDado: any) => {  //usuarios logar
-    const resposta = await api.post(url, dados)
+export const login = async(url: any,dados: any,setDado: any) => { 
+    const resposta = await api.post(url,dados)
     setDado(resposta.data.token)
-
 }
 
-export const busca =async (url: any , setDado: any, header:any) => {  //usuarios logar
+export const busca = async(url: any,setDado: any, header: any) => { 
     const resposta = await api.get(url,header)
     setDado(resposta.data)
+}
 
+export const buscaId = async(url: any,setDado: any, header: any) => { 
+    const resposta = await api.get(url,header)
+    setDado(resposta.data)
+}
+
+export const post = async(url: any, dados: any, setDado: any, header: any) => { 
+    const resposta = await api.post(url,dados,header)
+    setDado(resposta.data)
+}
+
+export const put = async(url: any, dados: any, setDado: any, header: any) => { 
+    const resposta = await api.put(url,dados,header)
+    setDado(resposta.data)
+}
+
+export const deleteId = async(url: any,header: any) => { 
+    await api.delete(url,header)
 }
