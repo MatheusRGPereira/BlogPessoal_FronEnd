@@ -12,11 +12,14 @@ import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import ListaTema from './components/temas/listatema/ListaTema';
 import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
+import { Provider } from 'react-redux';
+import store from './store/Store';
 
 
 function App() {
   return (
-    <Router>
+    <Provider store={store}>
+      <Router>
        <Navbar />
       <Routes>
 
@@ -51,6 +54,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </Provider>
 
   );
 }

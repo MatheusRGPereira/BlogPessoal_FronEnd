@@ -1,17 +1,19 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Grid, Box, Typography, TextField, Button, } from '@material-ui/core'
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 
 import { login } from "../../service/Service";
 import UserLogin from "../../models/UserLogin";
 import './Login.css';
+import { useDispatch } from 'react-redux';
+import { addToken } from '../../store/tokens/action';
 
 function Login() {
 
     let history = useNavigate();
+    const dispatch = useDispatch();
 
-    const [token, setToken] = useLocalStorage('token');
+    const [token, setToken] = useState('');
 
     const [userLogin, setUserLogin] = useState<UserLogin>({
         id: 0,
@@ -22,9 +24,10 @@ function Login() {
         token: ""
     })
 
-    useEffect(() => {
-        if (token !== "") {
-            history('/home')
+    useEffect(()=>{
+        if(token != ''){
+            dispatch(addToken(token));
+            history ('/home')
         }
     }, [token])
 
