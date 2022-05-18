@@ -18,6 +18,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/estaticos/footer/Footer';
 
 
+
 function App() {
   return (
     <Provider store={store}>
